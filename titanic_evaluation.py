@@ -7,6 +7,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pickle
+with open("titanic_model.pkl", "wb") as f:
+    pickle.dump(model, f)   # replace 'model' with your variable name (rf / dt / etc.)
 
 # 1. Load Titanic dataset
 df = pd.read_csv(r"D:\shelly\ml_practice\Titanic_Survival_Prediction\titanic.csv")
